@@ -67,6 +67,9 @@ set n2 [$ns node]
 set n3 [$ns node]
 set n4 [$ns node]
 set n5 [$ns node]
+set n6 [$ns node]
+set n7 [$ns node]
+set n8 [$ns node]
 
 $n0 random-motion 0
 $n1 random-motion 0
@@ -81,39 +84,59 @@ $ns initial_node_pos $n2 20
 $ns initial_node_pos $n3 20
 $ns initial_node_pos $n4 20
 $ns initial_node_pos $n5 20
+$ns initial_node_pos $n6 20
+$ns initial_node_pos $n7 20
+$ns initial_node_pos $n8 20
 
 #initial coordinates of the nodes
-$n0 set X_ 10.0
-$n0 set Y_ 20.0
+$n0 set X_ 50.0
+$n0 set Y_ 330.0
 $n0 set Z_ 0.0
 
-$n1 set X_ 210.0
+$n1 set X_ 0.0
 $n1 set Y_ 230.0
 $n1 set Z_ 0.0
 
-$n2 set X_ 100.0
-$n2 set Y_ 200.0
+$n2 set X_ 50.0
+$n2 set Y_ 130.0
 $n2 set Z_ 0.0
 
-$n3 set X_ 150.0
-$n3 set Y_ 230.0
+$n3 set X_ 100.0
+$n3 set Y_ 180.0
 $n3 set Z_ 0.0
 
-$n4 set X_ 430.0
-$n4 set Y_ 320.0
+$n4 set X_ 100.0
+$n4 set Y_ 280.0
 $n4 set Z_ 0.0
 
-$n5 set X_ 270.0
-$n5 set Y_ 130.0
+$n5 set X_ 150.0
+$n5 set Y_ 280.0
 $n5 set Z_ 0.0
+
+$n6 set X_ 150.0
+$n6 set Y_ 180.0
+$n6 set Z_ 0.0
+
+$n7 set X_ 200.0
+$n7 set Y_ 280.0
+$n7 set Z_ 0.0
+
+$n8 set X_ 200.0
+$n8 set Y_ 180.0
+$n8 set Z_ 0.0
 
 #mobility of the nodes
 #At what time? Which node? Where to? What speed?	
-$ns at 1.0 "$n1 setdest 490.0 340.0 25.0"
-$ns at 1.0 "$n4 setdest 300.0 130.0 5.0"
-$ns at 1.0 "$n5 setdest 190.0 440.0 15.0"
+$ns at 0.0 "$n0 setdest 490.0 340.0 0.0"
+$ns at 0.0 "$n1 setdest 490.0 340.0 0.0"
+$ns at 0.0 "$n2 setdest 490.0 340.0 0.0"
+$ns at 0.0 "$n3 setdest 490.0 340.0 0.0"
+$ns at 0.0 "$n4 setdest 300.0 130.0 0.0"
+$ns at 0.0 "$n5 setdest 190.0 440.0 0.0"
+$ns at 0.0 "$n6 setdest 490.0 340.0 0.0"
+$ns at 0.0 "$n7 setdest 300.0 130.0 0.0"
+$ns at 0.0 "$n8 setdest 190.0 440.0 0.0"
 
-$ns at 20.0 "$n5 setdest 100.0 200.0 30.0"
 #nodes can move any number of times. Here, n5 is moved twice
 
 #Creation of agents
