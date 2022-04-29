@@ -26,7 +26,7 @@ for line in lines[10:]:
     if words[0] == "s" and words[2] == sender_node:
         sent[(sender_node, packet_id, payload_type, trace_level)] = time
 
-    if words[0] == "r" and (sender_node, packet_id, payload_type, trace_level) in sent:
+    if words[0] == "r" and words[2] == receiver_node and (sender_node, packet_id, payload_type, trace_level) in sent:
         delay = time - sent[(sender_node, packet_id, payload_type, trace_level)]
 
         # print(sent[(sender_node, packet_id, payload_type, trace_level, packet_size)], time)
